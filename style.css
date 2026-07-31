@@ -1,0 +1,126 @@
+:root {
+    --bg: #0a0a0a;
+    --fg: #fc9d41;
+    --fnt: 'Space Mono', monospace;
+    --heading-fnt: 'VT323', monospace;
+    --brand-accent: #e16b29;
+    --btn-shadow: #5a4b41;
+    --screen-glow: rgba(252, 157, 65, 0.5);
+    --bdr: 0px;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--fnt);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--btn-shadow);
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    font-family: var(--heading-fnt);
+    font-size: 38px;
+    margin: 0;
+    color: var(--brand-accent);
+    text-shadow: 0 0 5px rgba(225, 107, 41, 0.4);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.btn, .tactile-btn {
+    background-color: var(--bg);
+    border: 2px solid var(--btn-shadow);
+    color: var(--fg);
+    font-family: var(--fnt);
+    padding: 8px 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover, .tactile-btn:hover {
+    border-color: var(--brand-accent);
+    background-color: #1a1412;
+}
+
+#legend-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.legend-box {
+    width: 12px;
+    height: 12px;
+}
+
+#chart-container {
+    width: 900px;
+    height: 550px;
+    position: relative;
+    background-color: var(--bg);
+    border: 2px solid var(--btn-shadow);
+}
+
+svg {
+    background-color: transparent;
+    font-family: var(--fnt);
+}
+
+.domain, .tick line {
+    stroke: var(--btn-shadow);
+    stroke-width: 2px;
+}
+
+.tick text {
+    fill: var(--fg);
+    font-size: 14px;
+}
+
+.data-line {
+    fill: none;
+    stroke-width: 3px;
+    filter: drop-shadow(0 0 5px var(--screen-glow));
+}
+
+.chart-title {
+    fill: var(--brand-accent);
+    font-family: var(--heading-fnt);
+    font-size: 38px;
+    text-shadow: 0 0 5px rgba(225, 107, 41, 0.4);
+}
+
+.tooltip {
+    position: absolute;
+    background: var(--bg);
+    border: 2px solid var(--brand-accent);
+    color: var(--fg);
+    padding: 8px;
+    font-size: 12px;
+    pointer-events: none;
+    box-shadow: 0 0 10px var(--screen-glow);
+}
