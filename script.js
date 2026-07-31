@@ -122,7 +122,7 @@ function drawScene2(svg) {
     let targetY = y(7.0);
 
     let anno = [{
-        note: { title: "Malayalam Acclaim", label: "Consistently high critical ratings." },
+        note: { title: "Mid-Era Slump & Recovery", label: "Indian films rebounded in the 2010s" },
         x: targetX, y: targetY, dy: -60, dx: -100,
         color: "#e16b29"
     }];
