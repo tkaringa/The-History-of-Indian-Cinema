@@ -220,7 +220,7 @@ function updateScene3(data, g, xG, yG, tooltip, button) {
         .attr("fill", function(d) { return colors[d.LangCategory]; })
         .on("mouseover", function(event, d) {
             tooltip.style("opacity", 1);
-            tooltip.html("<strong>" + d['Movie Name'] + "</strong><br>Rating: " + d.Rating_clean + "<br>Year: " + d.Year_clean + "<br>Language: " + d.LangCategory)
+            tooltip.html("<strong>" + d['Movie Name'] + "</strong><br>Rating: " + d.Rating_clean + "<br>Year: " + d.Year_clean + "<br>Language: " + d.LangCategory + "<br>Votes: " + d.Votes_clean)
                 .style("left", (event.pageX + 15) + "px")
                 .style("top", (event.pageY - 15) + "px");
         })
